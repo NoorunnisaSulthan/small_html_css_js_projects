@@ -1,0 +1,67 @@
+body{
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    /* unsplash.com for pic background */
+    background: url("backPic.jpg");
+   /* cover background so that some parts are not invisibke*/  
+    background-size: cover;
+    color: white;
+    font-family: sans-serif;
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.clock{
+    display: flex;
+
+}
+
+.clock div{
+    margin:5px;
+    position: relative;
+
+}
+
+.clock span{
+    /* when display flex is added then only each span shows the property of hieight and width */
+    width:100px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: brown;
+    opacity: .8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px ;
+     /* black color with opacity 0.5 for the text shadow in rgb */
+    text-shadow: 2px 2px 4px rgb(0,0,0,0.5);
+
+}
+.clock .text{
+height:30px;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 2px;
+background: burlywood;
+
+}
+.clock #ampm{
+    /* with respect to the divs its goes to the bottom */
+    bottom:0;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background:green ;
+    
+}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Char Counter</title>
+    <link rel="stylesheet" href="charCounter.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Character Counter</h2>
+        <!-- max length countrols max characters that can be entered -->
+        <textarea  id="textArea" class="textArea " placeholder="Enter your text here!" maxlength="50"></textarea>
+        <div class="counter-container">
+            <p>Total characters: <span class="total-counter" id="total-counter">30</span></p>
+            <p>Remaining characters: <span class="remaining-counter" id="remaining-counter">30</span></p>
+        </div>
+    </div>
+    <script src="charCounter.js"></script>
+</body>
+</html>

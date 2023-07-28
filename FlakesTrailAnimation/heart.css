@@ -1,0 +1,58 @@
+body{
+    margin:0;
+    height: 100vh;
+    background-color: black;
+
+/* to hide scroll bar */
+overflow: hidden;
+}
+span{
+    background:url("https://cdn3.iconfinder.com/data/icons/christmas-new-year-2040/96/Icon_Snowflake-512.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+
+    /* after the baove steps the heart is seen in span
+ next step===to bring image to center*/
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+/* makes image appear only once */
+pointer-events: none;
+
+
+/* this adds the animation */
+animation: animate 6s linear;
+
+
+
+}
+/* for Animation */
+@keyframes animate{
+    0%{
+       transform: translate(-50%,-50%); 
+       opacity: 1;
+
+/* to get different color to the flake */
+
+       filter: hue-rotate(0);
+    }
+
+    /* to make it feel like they have hit above the screen */
+
+    100%{
+        transform: translate(-50%,-5000%); 
+        /* it'll become invisible */
+        opacity: 0;
+
+        filter:hue-rotate(720deg);
+    }
+}
+
+
+/* 
+take away
+how to center ur background image
+how to change color of object using filter */

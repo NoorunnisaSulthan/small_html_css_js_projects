@@ -1,0 +1,52 @@
+body{
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("backM.jpg");
+    background-size: cover;
+}
+.form{
+    background-color: rgb(187, 201, 201);
+    padding:20px;
+    box-shadow: 2px 2px 4px ;
+    border-radius: 5px;
+    
+}
+.input{
+    /*  to push button to next line */
+    display:block;
+    width:100%;
+    /* both sides equal spacing of box*/
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    border:solid 2px grey;
+    padding:10px;
+    height: 50px;
+
+}
+.btn{
+    background-color: black;
+    color:white;
+    width:100%;
+    margin-top: 10px;
+     height:40px;
+     font-size: 19px;
+     text-transform: uppercase;
+     cursor: pointer;
+
+}
+/* when we hover over button */
+.btn:hover{
+    /* when we hover over the button its brightness will decrease by .5 */
+
+    filter:brightness(.5);
+}
+
+.score{
+    text-align: center;
+    text-transform: uppercase;
+}

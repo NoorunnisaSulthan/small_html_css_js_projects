@@ -1,0 +1,64 @@
+body{
+    margin:0;
+    display: flex;
+    /*for making any element to center use these three lines*/
+    justify-content: center;
+    height:100vh;
+    align-items: center;
+    
+    background-color: aliceblue;
+
+}
+.btn{
+    background-color: pink;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px  ;
+    /* to remove underline
+     */
+    text-decoration: none;
+    position: relative;
+
+    /* overflow is used to hide the big circle that comes, when u hover overflow: as u described over hover before  ; */
+
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    width: 1px;
+    height: 1px;
+    /* why xpos and ypos
+    cause we cant called pseudo element in js, so we create variable here and call it there */
+    left:var(--xpos);
+    top: var(--ypos);
+    
+    /* till here the square box not in center */
+    transform: translate(-50%,-50%);
+border-radius: 50%;
+transition: width 0.5s, height 0.5s;
+
+}
+
+
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+/* to make button written to be put on top use z index */
+
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+
+/* take away
+1. making a pseudo elemnt using ::before 
+2.then assigning size change on the pseudo element on :hover
+3. using overfow to make the size change with respect to the button padding
+4.making button text have z index 1 to make it over the pseudo element */
+
+/* 5. we will use js make ripple elect from the mouse pointer */
